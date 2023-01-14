@@ -19,7 +19,7 @@ class BaseTest {
     protected GenerateData generateData = new GenerateData();
 
     @BeforeAll
-    void setUp() {
+    static void setUp() {
         WebDriverProvider.configure();
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DesiredCapabilities capabilities = new DesiredCapabilities();
