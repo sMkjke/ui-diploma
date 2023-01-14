@@ -13,7 +13,7 @@ import ru.ostrovok.testData.enums.Locale;
 import static io.qameta.allure.Allure.step;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class LanguageTest extends BaseTest {
+class LanguageTest extends BaseTest {
 
     public static final String LOG_IN_ENGLISH = "Log in";
     public static final String LOG_IN_DEUTSCH = "Anmelden";
@@ -51,9 +51,15 @@ public class LanguageTest extends BaseTest {
         step("Log in button check in " + locale.name(), () -> {
             var controlModule = mainPage.getControlModule();
             switch (locale.name()) {
-                case ("English") -> assertEquals(LOG_IN_ENGLISH, controlModule.text());
-                case ("Deutsch") -> assertEquals(LOG_IN_DEUTSCH, controlModule.text());
-                case ("Italiano") -> assertEquals(LOG_IN_ITALIANO, controlModule.text());
+                case ("English"):
+                    assertEquals(LOG_IN_ENGLISH, controlModule.text());
+                    break;
+                case ("Deutsch"):
+                    assertEquals(LOG_IN_DEUTSCH, controlModule.text());
+                    break;
+                case ("Italiano"):
+                    assertEquals(LOG_IN_ITALIANO, controlModule.text());
+                    break;
             }
         });
     }

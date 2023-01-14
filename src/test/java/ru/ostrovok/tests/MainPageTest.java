@@ -8,7 +8,7 @@ import ru.ostrovok.pages.MainPage;
 
 import static io.qameta.allure.Allure.step;
 
-public class MainPageTest extends BaseTest {
+class MainPageTest extends BaseTest {
 
     @Feature("Mainpage")
     @Owner("Smkjke")
@@ -25,7 +25,7 @@ public class MainPageTest extends BaseTest {
     @Owner("Smkjke")
     @DisplayName("Check MainSubmenu")
     @Test
-    void checkMainSubMenu(){
+    void checkMainSubMenu() {
         step("Open main page", () ->
                 mainPage.openPage());
         step("Click on main menu", () ->

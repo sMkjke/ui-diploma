@@ -8,7 +8,7 @@ import ru.ostrovok.pages.UserSettingsPage;
 
 import static io.qameta.allure.Allure.step;
 
-public class RegistrationTest extends BaseTest {
+class RegistrationTest extends BaseTest {
 
     public static final String DATA_IS_SAVED = "Данные сохранены";
     private UserSettingsPage userSettingsPage;
