@@ -12,7 +12,6 @@ public class WebDriverProvider {
         Configuration.browser = WebDriverProvider.config.getBrowser();
         Configuration.browserVersion = WebDriverProvider.config.getBrowserVersion();
         Configuration.browserSize = WebDriverProvider.config.getBrowserSize();
-
         String remoteUrl = WebDriverProvider.config.getRemoteURL();
         if (remoteUrl != null) {
             Configuration.remote = remoteUrl;

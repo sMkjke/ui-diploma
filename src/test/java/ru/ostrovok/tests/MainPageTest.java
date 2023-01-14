@@ -17,6 +17,10 @@ class MainPageTest extends BaseTest {
     void checkTitlePage() {
         step("Open main page", () ->
                 mainPage.openPage());
+        step("Click on language menu", () ->
+                mainPage.clickOnLanguageMenu());
+        step("Choose language", () ->
+                mainPage.clickOnChoosedLanguage("Русский"));
         step("Check main page title", () ->
                 mainPage.checkTitle(MainPage.TITLE_TEXT));
     }
@@ -28,6 +32,10 @@ class MainPageTest extends BaseTest {
     void checkMainSubMenu() {
         step("Open main page", () ->
                 mainPage.openPage());
+        step("Click on language menu", () ->
+                mainPage.clickOnLanguageMenu());
+        step("Choose language", () ->
+                mainPage.clickOnChoosedLanguage("Русский"));
         step("Click on main menu", () ->
                 mainPage.clickOnMainMenu());
         step("Check main sub menu is visible", () ->

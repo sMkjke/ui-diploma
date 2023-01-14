@@ -30,10 +30,10 @@ class BaseTest {
 
     @AfterEach
     void addAttach() {
-        Attachments.addVideo();
-        Attachments.browserConsoleLogs();
         Attachments.screenshotAs("Last screenshot");
         Attachments.pageSource();
+        Attachments.browserConsoleLogs();
+        Attachments.addVideo();
         closeWebDriver();
     }
 }

@@ -20,6 +20,10 @@ class RegistrationTest extends BaseTest {
     void c() {
         step("Open page", () ->
                 mainPage.openPage());
+        step("Click on language menu", () ->
+                mainPage.clickOnLanguageMenu());
+        step("Choose language", () ->
+                mainPage.clickOnChoosedLanguage("Русский"));
         step("Check login menu item is present", () ->
                 mainPage.checkMenuItemIsVisible("Войти"));
         step("Click on login menu", () ->

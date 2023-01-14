@@ -28,6 +28,10 @@ class LanguageTest extends BaseTest {
     void checkLanguageMenuSize() {
         step("Open main page", () ->
                 mainPage.openPage());
+        step("Click on language menu", () ->
+                mainPage.clickOnLanguageMenu());
+        step("Choose language", () ->
+                mainPage.clickOnChoosedLanguage("Русский"));
         step("Check language menu item is present", () ->
                 mainPage.checkMenuItemIsVisible("Русский"));
         step("Click on language menu", () ->
